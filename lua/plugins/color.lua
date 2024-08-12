@@ -14,6 +14,10 @@ return {
 		},
 		config = function()
 			vim.cmd([[colorscheme rose-pine]])
+			vim.api.nvim_set_hl(0, "Pmenu", { bg = "None" })
+			vim.api.nvim_set_hl(0, "PmenuKind", { bg = "None" })
+			vim.api.nvim_set_hl(0, "PmenuExtra", { bg = "None" })
+			vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "None" })
 		end,
 	},
 }

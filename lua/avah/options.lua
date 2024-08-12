@@ -29,6 +29,9 @@ local options = {
 	updatetime = 20,
 	scrolloff = 15,
 	background = "light",
+
+	inccommand = "split",
+	wrap = false,
 }
 
 -- vim.opt.nrformats:append("alpha") -- increment letters

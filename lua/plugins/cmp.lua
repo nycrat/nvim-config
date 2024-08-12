@@ -48,6 +48,23 @@ return {
 					end,
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
+				window = {
+					completion = {
+						border = "rounded",
+					},
+					documentation = {
+						border = "rounded",
+					},
+				},
+				preselect = "item",
+				performance = {
+					debounce = 0,
+					throttle = 0,
+					confirm_resolve_timeout = 0,
+					async_budget = 100,
+					fetching_timeout = 500,
+					max_view_entries = 20,
+				},
 
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
@@ -55,9 +72,15 @@ return {
 				-- No, but seriously. Please read `:help ins-completion`, it is really good!
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
-					["<C-n>"] = cmp.mapping.select_next_item(),
+					["<c-n>"] = (function()
+						if cmp.visible() then
+							cmp.mapping.select_next_item()
+						else
+							cmp.mapping.complete({})
+						end
+					end)(),
 					-- Select the [p]revious item
-					["<C-p>"] = cmp.mapping.select_prev_item(),
+					["<c-p>"] = cmp.mapping.select_prev_item(),
 
 					-- Scroll the documentation window [b]ack / [f]orward
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -73,11 +96,6 @@ return {
 					--['<CR>'] = cmp.mapping.confirm { select = true },
 					--['<Tab>'] = cmp.mapping.select_next_item(),
 					--['<S-Tab>'] = cmp.mapping.select_prev_item(),
-
-					-- Manually trigger a completion from nvim-cmp.
-					--  Generally you don't need this, because nvim-cmp will display
-					--  completions whenever it has completion options available.
-					["<C-Space>"] = cmp.mapping.complete({}),
 
 					-- Think of <c-l> as moving to the right of your snippet expansion.
 					--  So if you have a snippet that's like:

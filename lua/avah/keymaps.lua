@@ -44,3 +44,10 @@ map("n", "<c-h>", "<c-w><c-h>")
 map("n", "<c-j>", "<c-w><c-j>")
 map("n", "<c-k>", "<c-w><c-k>")
 map("n", "<c-l>", "<c-w><c-l>")
+
+map("n", "<esc>", "<cmd>nohlsearch<cr>")
+
+map("n", "<leader>cb", "<cmd>Run build<cr>")
+map("n", "<leader>cr", "<cmd>Run build<cr><cmd>Run run<cr>")
+map("n", "<leader>cl", "<cmd>Run run<cr>")
+map("n", "<leader>cc", "<cmd>Run clean<cr>")
