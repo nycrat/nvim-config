@@ -17,7 +17,7 @@ map("n", "<leader><tab>", function()
 	end
 end)
 
-map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>p", "<cmd>Telescope find_files hidden=true<cr>")
 map("n", "<leader>x", "<cmd>Telescope live_grep<cr>")
 
 map("x", "<leader>y", [["+y]])
@@ -51,3 +51,8 @@ map("n", "<leader>cb", "<cmd>Run build<cr>")
 map("n", "<leader>cr", "<cmd>Run build<cr><cmd>Run run<cr>")
 map("n", "<leader>cl", "<cmd>Run run<cr>")
 map("n", "<leader>cc", "<cmd>Run clean<cr>")
+
+map("n", "<C-s>", "<Cmd>silent !font-switcher; pkill -SIGUSR1 -a kitty<CR>")
+map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+map("i", "<C-s>", "<Cmd>silent !font-switcher; pkill -SIGUSR1 -a kitty<CR>")
+map("i", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
