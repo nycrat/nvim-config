@@ -73,19 +73,23 @@ return {
 					-- Jump to the definition of the word under your cursor.
 					--  This is where a variable was first declared, or where a function is defined, etc.
 					--  To jump back, press <C-t>.
-					map("<leader>ff", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					map("<leader>ff", require("telescope.builtin").lsp_definitions, "[F]ind De[f]inition")
+
+					-- This is not Goto Definition, this is Goto Declaration.
+					--  For example, in C this would take you to the header.
+					map("<leader>fd", vim.lsp.buf.declaration, "[F]ind [D]eclaration")
 
 					-- Find references for the word under your cursor.
-					map("<leader>fr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+					map("<leader>fr", require("telescope.builtin").lsp_references, "[F]ind [R]eferences")
 
 					-- Jump to the implementation of the word under your cursor.
 					--  Useful when your language has ways of declaring types without an actual implementation.
-					map("<leader>fi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+					map("<leader>fi", require("telescope.builtin").lsp_implementations, "[F]ind [I]mplementation")
 
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
-					map("<leader>ft", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+					map("<leader>ft", require("telescope.builtin").lsp_type_definitions, "[F]ind  [T]ype")
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
@@ -108,10 +112,6 @@ return {
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-
-					-- WARN: This is not Goto Definition, this is Goto Declaration.
-					--  For example, in C this would take you to the header.
-					map("<leader>fd", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 					-- The following two autocommands are used to highlight references of the
 					-- word under your cursor when your cursor rests there for a little while.
@@ -150,7 +150,7 @@ return {
 					if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
 						map("<leader>h", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
-						end, "[T]oggle Inlay [H]ints")
+						end, "Toggle Inlay [H]ints")
 					end
 				end,
 			})
