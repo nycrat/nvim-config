@@ -23,6 +23,7 @@ return {
 						"rafamadriz/friendly-snippets",
 						config = function()
 							require("luasnip.loaders.from_vscode").lazy_load()
+							require("luasnip.loaders.from_snipmate").lazy_load()
 						end,
 					},
 				},
@@ -115,6 +116,9 @@ return {
 							luasnip.jump(-1)
 						end
 					end, { "i", "s" }),
+					["<c-k>"] = cmp.mapping(function()
+						luasnip.expand()
+					end),
 
 					-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 					--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
