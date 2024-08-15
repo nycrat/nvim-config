@@ -28,6 +28,25 @@ return {
 					},
 				},
 			},
+			{
+				"ray-x/lsp_signature.nvim",
+				event = "VeryLazy",
+				opts = {
+					handler_opts = {
+						border = "double",
+					},
+					-- floating_window = false,
+					hint_prefix = {
+						above = "↙ ", -- when the hint is on the line above the current line
+						current = "← ", -- when the hint is on the same line
+						below = "↖ ", -- when the hint is on the line below the current line
+					},
+					timer_interval = 0,
+				},
+				config = function(_, opts)
+					require("lsp_signature").setup(opts)
+				end,
+			},
 			"saadparwaiz1/cmp_luasnip",
 
 			-- Adds other completion capabilities.
