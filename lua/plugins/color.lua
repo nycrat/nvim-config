@@ -13,7 +13,7 @@ return {
 			},
 		},
 		config = function()
-			vim.cmd([[colorscheme rose-pine]])
+			vim.cmd([[colorscheme rose-pine-dawn]])
 			vim.api.nvim_set_hl(0, "Pmenu", { bg = "None" })
 			vim.api.nvim_set_hl(0, "PmenuKind", { bg = "None" })
 			vim.api.nvim_set_hl(0, "PmenuExtra", { bg = "None" })

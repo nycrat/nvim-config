@@ -172,7 +172,20 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
+				arduino_language_server = {
+					cmd = {
+						"arduino-language-server",
+						"-clangd",
+						"/Users/avah/.local/share/nvim/mason/bin/clangd",
+						"-cli",
+						"/opt/homebrew/bin/arduino-cli",
+						"-cli-config",
+						"/Users/avah/.arduinoIDE/arduino-cli.yaml",
+						"-fqbn",
+						"arduino:avr:uno",
+					},
+				},
+				clangd = {},
 				-- gopls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
@@ -183,7 +196,6 @@ return {
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				-- tsserver = {},
-				--
 
 				lua_ls = {
 					-- cmd = {...},
@@ -195,7 +207,7 @@ return {
 								callSnippet = "Replace",
 							},
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-							-- diagnostics = { disable = { 'missing-fields' } },
+							diagnostics = { disable = { "missing-fields" } },
 						},
 					},
 				},
