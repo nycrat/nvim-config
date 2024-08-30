@@ -9,6 +9,15 @@ return {
 			view_options = {
 				show_hidden = true,
 			},
+			keymaps = {
+				["gs"] = function()
+					local split_file = require("oil").get_cursor_entry().parsed_name
+					local dir = require("oil").get_current_dir(0)
+					require("oil").close()
+					vim.cmd("vs")
+					vim.cmd("e " .. dir .. split_file)
+				end,
+			},
 		},
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },

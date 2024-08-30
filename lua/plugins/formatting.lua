@@ -4,20 +4,36 @@ return {
 		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
 		keys = {
-			-- {
-			-- 	"<leader>m",
-			-- 	function()
-			-- 		require("conform").format({ async = true, lsp_fallback = true })
-			-- 	end,
-			-- 	mode = "n",
-			-- },
+			{
+				"<leader>mm",
+				function()
+					-- require("conform").format({ async = true, lsp_fallback = true })
+					vim.g.disable_autoformat = not vim.g.disable_autoformat
+					if vim.g.disable_autoformat then
+						print("Autoformat Disabled")
+					else
+						print("Autoformat Enabled")
+					end
+				end,
+				mode = "n",
+			},
+			{
+				"<leader>mf",
+				function()
+					-- require("conform").format({ async = true, lsp_fallback = true })
+					print(vim.inspect(require("conform").list_all_formatters()))
+				end,
+				mode = "n",
+			},
 		},
 		opts = {
-			notify_on_error = false,
+			notify_on_error = true,
+			notify_no_formatters = true,
 			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
+				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+					return
+				end
+
 				-- local disable_filetypes = { c = true, cpp = true }
 				local disable_filetypes = {}
 				return {
@@ -27,11 +43,13 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				markdown = { "prettier" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescriptreact = { "prettierd" },
+				markdown = { "prettierd" },
+				html = { "prettierd" },
+				yaml = { "prettierd" },
 			},
 		},
 	},
