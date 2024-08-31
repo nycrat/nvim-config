@@ -10,12 +10,17 @@ return {
 				show_hidden = true,
 			},
 			keymaps = {
-				["gs"] = function()
+				["<C-s>"] = function()
 					local split_file = require("oil").get_cursor_entry().parsed_name
 					local dir = require("oil").get_current_dir(0)
 					require("oil").close()
 					vim.cmd("vs")
 					vim.cmd("e " .. dir .. split_file)
+				end,
+				["gy"] = function()
+					local file = require("oil").get_cursor_entry().parsed_name
+					local dir = require("oil").get_current_dir(0)
+					vim.fn.setreg("+", dir .. file)
 				end,
 			},
 		},
