@@ -20,8 +20,8 @@ return {
 			{
 				"<leader>mf",
 				function()
-					-- require("conform").format({ async = true, lsp_fallback = true })
-					print(vim.inspect(require("conform").list_all_formatters()))
+					require("conform").format({ async = true, lsp_fallback = true })
+					-- print(vim.inspect(require("conform").list_all_formatters()))
 				end,
 				mode = "n",
 			},
@@ -50,6 +50,7 @@ return {
 				markdown = { "prettierd" },
 				html = { "prettierd" },
 				yaml = { "prettierd" },
+				json = { "prettierd" },
 			},
 		},
 	},

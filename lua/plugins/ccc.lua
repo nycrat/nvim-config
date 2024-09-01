@@ -4,8 +4,10 @@ return {
 		opts = {
 			highlighter = {
 				auto_enable = true,
-				lsp = false,
+				lsp = true,
 			},
+			lsp = true,
+			save_on_quit = true,
 		},
 	},
 }
