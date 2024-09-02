@@ -59,4 +59,4 @@ map("i", "<c-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
 
 map("n", "<leader>cp", "<cmd>CccPick<cr>")
 map("n", "<leader>cc", "<cmd>CccConvert<cr>")
-map("n", "<leader>ct", "<cmd>CccToggle<cr>")
+map("n", "<leader>ct", "<cmd>CccHighlighterToggle<cr>")
