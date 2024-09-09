@@ -22,6 +22,9 @@ return {
 					local dir = require("oil").get_current_dir(0)
 					vim.fn.setreg("+", dir .. file)
 				end,
+				[")"] = function()
+					require("oil").select()
+				end,
 			},
 		},
 		dependencies = {
