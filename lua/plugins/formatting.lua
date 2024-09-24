@@ -5,7 +5,7 @@ return {
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>mm",
+				"<leader>mt",
 				function()
 					-- require("conform").format({ async = true, lsp_fallback = true })
 					vim.g.disable_autoformat = not vim.g.disable_autoformat
