@@ -4,7 +4,7 @@ return {
 	-- 	opts = {},
 	-- },
 	{
-		dir = vim.fn.expand("~/personal/repositories/MISC/maker.nvim/"),
+		dir = vim.fn.expand("~/1_personal/repositories/MISC/maker.nvim/"),
 		opts = {},
 	},
 }
