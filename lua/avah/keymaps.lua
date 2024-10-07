@@ -23,6 +23,7 @@ end)
 
 map("n", "<leader>p", "<cmd>Telescope find_files hidden=true<cr>")
 map("n", "<leader>x", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>S", function() require("spectre").toggle() end)
 
 map("x", "<leader>y", [["+y]])
 map(

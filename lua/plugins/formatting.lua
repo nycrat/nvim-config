@@ -34,8 +34,7 @@ return {
 					return
 				end
 
-				-- local disable_filetypes = { c = true, cpp = true }
-				local disable_filetypes = {}
+				local disable_filetypes = { bib = true }
 				return {
 					timeout_ms = 500,
 					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
