@@ -1,9 +1,19 @@
 return {
 	{
 		"folke/todo-comments.nvim",
-		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
+		opts = {
+			keywords = {
+				TK = { icon = " ", color = "info" },
+			},
+			highlight = {
+				comments_only = false,
+				pattern = [[.*<(KEYWORDS)\s*]], -- vim regex
+			},
+			search = {
+				pattern = [[\b(KEYWORDS)]], -- ripgrep regex
+			},
+		},
 	},
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
