@@ -185,6 +185,17 @@ return {
 						"arduino:avr:uno",
 					},
 				},
+				java_language_server = {
+					cmd = {
+						vim.fn.expand("~/.local/share/nvim/mason/bin/java-language-server"),
+					},
+				},
+				tinymist = {
+					settings = {
+						exportPdf = "onSave",
+						outputPath = "$root/$dir/$name",
+					},
+				},
 				clangd = {},
 				-- gopls = {},
 				-- pyright = {},

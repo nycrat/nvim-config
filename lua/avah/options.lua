@@ -25,10 +25,11 @@ local options = {
 	swapfile = false,
 	undodir = os.getenv("HOME") .. "/.vim/undodir",
 	undofile = true,
+	-- guicursor = "a:block",
 
 	updatetime = 20,
 	scrolloff = 999,
-	background = "light",
+	background = os.getenv("THEME") or "light",
 
 	inccommand = "split",
 	wrap = false,
