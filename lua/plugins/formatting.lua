@@ -50,6 +50,7 @@ return {
 				html = { "prettierd" },
 				yaml = { "prettierd" },
 				json = { "prettierd" },
+				python = { "black" },
 			},
 		},
 	},
