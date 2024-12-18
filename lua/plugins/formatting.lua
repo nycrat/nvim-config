@@ -51,6 +51,7 @@ return {
 				yaml = { "prettierd" },
 				json = { "prettierd" },
 				python = { "black" },
+				typst = { "typstyle" },
 			},
 		},
 	},
