@@ -19,7 +19,7 @@ local options = {
 	-- showmode = false,
 	-- errorbells = false,
 	-- wrap = false,
-	cursorline = true,
+	cursorline = false,
 
 	writebackup = false,
 	swapfile = false,
