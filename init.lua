@@ -24,4 +24,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-vim.cmd("colorscheme dawnfox")
+-- Set colorscheme
+
+local theme = require("avah.utils").get_theme()
+
+if theme == "dark" then
+	vim.cmd("colorscheme nightfox")
+else
+	vim.cmd("colorscheme dawnfox")
+end
