@@ -1,6 +1,6 @@
 return {
 	"nvim-pack/nvim-spectre",
-	config = {
+	opts = {
 		mapping = {
 			["toggle_line"] = {
 				map = "VD",

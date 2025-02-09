@@ -147,7 +147,7 @@ return {
 					--
 					-- This may be unwanted, since they displace some of your code
 					if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-						vim.lsp.inlay_hint.enable(true)
+						vim.lsp.inlay_hint.enable(false)
 						map("<leader>h", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "Toggle Inlay [H]ints")
@@ -182,7 +182,6 @@ return {
 						outputPath = "$root/.typst/$dir/$name",
 					},
 				},
-				clangd = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				lua_ls = {
 					settings = {

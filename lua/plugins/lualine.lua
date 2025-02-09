@@ -11,7 +11,7 @@ return {
 						path = 1,
 					},
 				},
-				lualine_x = {},
+				lualine_x = { "filetype" },
 				lualine_y = {
 					function()
 						if vim.fn.getfsize(vim.fn.expand("%")) > 1 * 1000 * 1000 then

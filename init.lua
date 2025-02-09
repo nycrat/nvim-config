@@ -17,3 +17,11 @@ if theme == "dark" then
 else
 	vim.cmd("colorscheme dawnfox")
 end
+
+-- Bruh
+
+vim.filetype.add({
+	extension = {
+		mdx = "mdx",
+	},
+})
