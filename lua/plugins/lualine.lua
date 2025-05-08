@@ -4,7 +4,7 @@ return {
 		opts = {
 			sections = {
 				lualine_a = {},
-				lualine_b = { "branch", "diagnostics" },
+				lualine_b = { "diagnostics" },
 				lualine_c = {
 					{
 						"filename",
@@ -25,6 +25,7 @@ return {
 						end
 					end,
 				},
+				-- lualine_z = {},
 			},
 		},
 		dependencies = { "nvim-tree/nvim-web-devicons" },

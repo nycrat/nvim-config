@@ -4,7 +4,7 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			keywords = {
-				TK = { icon = " ", color = "info" },
+				-- TK = { icon = " ", color = "info" },
 			},
 			highlight = {
 				comments_only = false,

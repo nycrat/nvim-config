@@ -1,5 +1,6 @@
 require("avah.options")
 require("avah.keymaps")
+require("avah.commands")
 require("avah.lazy")
 
 vim.api.nvim_create_autocmd("VimEnter", {

@@ -178,8 +178,8 @@ return {
 					offset_encoding = "utf-8",
 					settings = {
 						formatterMode = "typstfmt",
-						exportPdf = "onSave",
-						outputPath = "$root/.typst/$dir/$name",
+						-- exportPdf = "onSave",
+						-- outputPath = "$root/.typst/$dir/$name",
 					},
 				},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
