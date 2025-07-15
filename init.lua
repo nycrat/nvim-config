@@ -2,6 +2,7 @@ require("avah.options")
 require("avah.keymaps")
 require("avah.commands")
 require("avah.lazy")
+require("avah.neovide")
 
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
@@ -25,4 +26,11 @@ vim.filetype.add({
 	extension = {
 		mdx = "mdx",
 	},
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*",
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+	end,
 })

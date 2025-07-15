@@ -30,7 +30,7 @@ return {
 			},
 			{
 				"ray-x/lsp_signature.nvim",
-				event = "VeryLazy",
+				event = "InsertEnter",
 				opts = {
 					handler_opts = {
 						border = "double",
@@ -43,9 +43,9 @@ return {
 					},
 					timer_interval = 0,
 				},
-				config = function(_, opts)
-					require("lsp_signature").setup(opts)
-				end,
+				-- config = function(_, opts)
+				-- 	require("lsp_signature").setup(opts)
+				-- end,
 			},
 			"saadparwaiz1/cmp_luasnip",
 
