@@ -1,10 +1,27 @@
+local avah_theme = {
+	normal = {
+		a = {},
+		b = {},
+		c = {},
+		x = {},
+		y = {},
+		z = {},
+	},
+}
+
 return {
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = {
+			options = {
+				theme = avah_theme,
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+				globalstatus = true,
+			},
 			sections = {
 				lualine_a = {},
-				lualine_b = { "diagnostics" },
+				lualine_b = { "branch", "diff", "diagnostics" },
 				lualine_c = {
 					{
 						"filename",
@@ -12,20 +29,8 @@ return {
 					},
 				},
 				lualine_x = { "filetype" },
-				lualine_y = {
-					function()
-						if vim.fn.getfsize(vim.fn.expand("%")) > 1 * 1000 * 1000 then
-							return "too many words"
-						end
-						local word_count = vim.fn.wordcount()
-						if word_count.visual_words then
-							return word_count.visual_words .. " words"
-						else
-							return word_count.words .. " words"
-						end
-					end,
-				},
-				-- lualine_z = {},
+				lualine_y = { "location" },
+				lualine_z = {},
 			},
 		},
 		dependencies = { "nvim-tree/nvim-web-devicons" },

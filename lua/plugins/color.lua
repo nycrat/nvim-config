@@ -4,6 +4,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		options = {
+			transparent = true,
 			colorblind = {
 				enable = true,
 				severity = {
@@ -14,6 +15,13 @@ return {
 			},
 		},
 	},
+	-- {
+	-- 	"xiyaowong/transparent.nvim",
+	-- 	lazy = false,
+	-- 	config = function()
+	-- 		-- require("transparent").clear_prefix("lualine")
+	-- 	end,
+	-- },
 	-- {
 	-- 	"rose-pine/neovim",
 	-- 	name = "rose-pine",
@@ -28,11 +36,6 @@ return {
 	-- 		},
 	-- 	},
 	-- 	config = function()
-	-- 		vim.api.nvim_set_hl(0, "Pmenu", { bg = "None" })
-	-- 		vim.api.nvim_set_hl(0, "PmenuKind", { bg = "None" })
-	-- 		vim.api.nvim_set_hl(0, "PmenuExtra", { bg = "None" })
-	-- 		vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "None" })
-	--
 	-- 		-- make color different from cursor
 	-- 		if os.getenv("THEME") == "dark" then
 	-- 			vim.api.nvim_set_hl(0, "MatchParen", { bg = "#2d3f67" })

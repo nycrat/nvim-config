@@ -33,6 +33,8 @@ local options = {
 
 	inccommand = "split",
 	wrap = false,
+
+	cmdheight = 0,
 }
 
 vim.g.mapleader = " "
