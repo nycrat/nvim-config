@@ -3,14 +3,16 @@ return {
 		"EdenEast/nightfox.nvim",
 		lazy = false,
 		priority = 1000,
-		options = {
-			transparent = true,
-			colorblind = {
-				enable = true,
-				severity = {
-					protan = 0,
-					deutan = 1,
-					tritan = 0,
+		opts = {
+			options = {
+				transparent = true,
+				colorblind = {
+					enable = true,
+					severity = {
+						protan = 0,
+						deutan = 1,
+						tritan = 0,
+					},
 				},
 			},
 		},
