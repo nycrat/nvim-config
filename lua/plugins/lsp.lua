@@ -162,7 +162,7 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-			require("lspconfig").gdscript.setup({})
+			-- require("lspconfig").gdscript.setup({}) !!!
 
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -221,7 +221,7 @@ return {
 						-- certain features of an LSP (for example, turning off formatting for tsserver)
 						server_config.capabilities =
 							vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
-						require("lspconfig")[server_name].setup(server_config)
+						-- require("lspconfig")[server_name].setup(server_config) !!!
 					end,
 				},
 			})
