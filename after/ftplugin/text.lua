@@ -1,5 +1,4 @@
 vim.opt_local.wrap = true
-vim.opt_local.spell = true
 
 local remap_options = { silent = true, buffer = 0, noremap = true }
 
