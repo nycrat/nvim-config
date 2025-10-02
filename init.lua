@@ -4,12 +4,6 @@ require("avah.commands")
 require("avah.lazy")
 require("avah.neovide")
 
--- vim.api.nvim_create_autocmd("VimEnter", {
--- 	callback = function()
--- 		print("Welcome to Neovim !")
--- 	end,
--- })
-
 -- Set colorscheme
 
 local theme = require("avah.utils").get_theme()
