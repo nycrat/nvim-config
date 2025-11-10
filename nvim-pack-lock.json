@@ -1,0 +1,85 @@
+{
+  "plugins": {
+    "gitsigns.nvim": {
+      "rev": "20ad441",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "guess-indent.nvim": {
+      "rev": "84a4987",
+      "src": "https://github.com/nmac427/guess-indent.nvim"
+    },
+    "harpoon": {
+      "rev": "87b1a35",
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
+    "lsp_signature.nvim": {
+      "rev": "1e56259",
+      "src": "https://github.com/ray-x/lsp_signature.nvim"
+    },
+    "mason.nvim": {
+      "rev": "ad7146a",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.completion": {
+      "rev": "581934b",
+      "src": "https://github.com/nvim-mini/mini.completion"
+    },
+    "mini.icons": {
+      "rev": "ff2e4f1",
+      "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "mini.pairs": {
+      "rev": "b316e68",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
+    "mini.pick": {
+      "rev": "08a7220",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "mini.snippets": {
+      "rev": "66c041f",
+      "src": "https://github.com/nvim-mini/mini.snippets"
+    },
+    "mini.surround": {
+      "rev": "88c5229",
+      "src": "https://github.com/nvim-mini/mini.surround"
+    },
+    "nightfox.nvim": {
+      "rev": "ba47d4b",
+      "src": "https://github.com/EdenEast/nightfox.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "2010fc6",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "42fc28ba",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-web-devicons": {
+      "rev": "8dcb311",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oil.nvim": {
+      "rev": "7e1cd77",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd522",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "0294ae3",
+      "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "todo-comments.nvim": {
+      "rev": "411503d",
+      "src": "https://github.com/folke/todo-comments.nvim"
+    },
+    "typst-preview.nvim": {
+      "rev": "64469f8",
+      "src": "https://github.com/chomosuke/typst-preview.nvim"
+    }
+  }
+}
