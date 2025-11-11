@@ -28,3 +28,6 @@ map("n", "<leader>lf", vim.lsp.buf.format)
 map("n", "<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
 map({ "n", "i" }, "<c-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
+
+map("n", "<leader>ca", vim.lsp.buf.code_action)
+map("n", "<leader>rn", vim.lsp.buf.rename)
