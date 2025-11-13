@@ -13,6 +13,10 @@
       "src": "https://github.com/ThePrimeagen/harpoon",
       "version": "'harpoon2'"
     },
+    "lazygit.nvim": {
+      "rev": "2305dee",
+      "src": "https://github.com/kdheepak/lazygit.nvim"
+    },
     "lsp_signature.nvim": {
       "rev": "1e56259",
       "src": "https://github.com/ray-x/lsp_signature.nvim"

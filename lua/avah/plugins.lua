@@ -16,20 +16,13 @@ vim.pack.add {
   { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/chomosuke/typst-preview.nvim",
-  "https://github.com/ray-x/lsp_signature.nvim"
+  "https://github.com/ray-x/lsp_signature.nvim",
+  "https://github.com/kdheepak/lazygit.nvim",
 }
 
 require "nightfox".setup {
   options = {
-    transparent = false,
-    colorblind = {
-      enable = true,
-      severity = {
-        protan = 0,
-        deutan = 1,
-        tritan = 0,
-      },
-    }
+    transparent = true,
   }
 }
 

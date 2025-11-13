@@ -13,6 +13,7 @@ end)
 
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
 map("n", "<leader>x", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>gg", "<cmd>LazyGit<cr>")
 map({ "n", "x", "v" }, "<leader>y", "\"+y")
 map("i", "jk", "<esc>")
 
@@ -31,3 +32,7 @@ map({ "n", "i" }, "<c-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
 
 map("n", "<leader>ca", vim.lsp.buf.code_action)
 map("n", "<leader>rn", vim.lsp.buf.rename)
+map("n", "<leader>ff", vim.lsp.buf.definition)
+map("n", "<leader>fd", vim.lsp.buf.declaration)
+map("n", "<leader>fi", vim.lsp.buf.implementation)
+map("n", "<leader>fr", vim.lsp.buf.references)
