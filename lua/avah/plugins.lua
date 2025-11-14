@@ -38,7 +38,15 @@ require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}
 require "mason".setup {}
-require "oil".setup {}
+require "oil".setup {
+  skip_confirm_for_simple_edits = true,
+  view_options = {
+    show_hidden = true,
+    is_always_hidden = function(name, buf)
+      return name == ".."
+    end
+  }
+}
 require "guess-indent".setup {}
 require "todo-comments".setup {}
 require "lsp_signature".setup {
