@@ -15,17 +15,25 @@ vim.api.nvim_create_autocmd("LspAttach", {
         return tonumber(vim.fn.pumvisible()) ~= 0
       end
 
-      vim.keymap.set("i", "<C-n>", function()
+      vim.keymap.set("i", "<cr>", function ()
         if pumvisible() then
-          feedkeys "<C-n>"
+          feedkeys "<esc>a<cr>"
+        else
+          feedkeys "<cr>"
+        end
+      end)
+
+      vim.keymap.set("i", "<c-n>", function()
+        if pumvisible() then
+          feedkeys "<c-n>"
         else
           if next(vim.lsp.get_clients { bufnr = 0 }) then
             vim.lsp.completion.get()
           else
             if vim.bo.omnifunc == "" then
-              feedkeys "<C-x><C-n>"
+              feedkeys "<c-x><c-n>"
             else
-              feedkeys "<C-x><C-o>"
+              feedkeys "<c-x><c-o>"
             end
           end
         end
