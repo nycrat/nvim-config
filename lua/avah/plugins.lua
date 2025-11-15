@@ -2,7 +2,7 @@ vim.pack.add {
   "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/nvim-treesitter/nvim-treesitter",
   "https://github.com/nvim-telescope/telescope.nvim",
-  "nvim-mini/mini.icons",
+  "https://github.com/nvim-mini/mini.icons",
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/nvim-mini/mini.surround",
   "https://github.com/nvim-mini/mini.snippets",
