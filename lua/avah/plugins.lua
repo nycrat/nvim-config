@@ -3,7 +3,6 @@ vim.pack.add {
   "https://github.com/nvim-treesitter/nvim-treesitter",
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/nvim-mini/mini.icons",
-  "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/nvim-mini/mini.surround",
   "https://github.com/nvim-mini/mini.snippets",
   "https://github.com/nvim-mini/mini.pairs",
@@ -34,6 +33,8 @@ require "nvim-treesitter.configs".setup {
 require "telescope".setup {}
 
 require "mini.icons".setup {}
+require "mini.icons".mock_nvim_web_devicons()
+
 require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}
