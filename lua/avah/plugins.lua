@@ -6,6 +6,8 @@ vim.pack.add {
   "https://github.com/nvim-mini/mini.surround",
   "https://github.com/nvim-mini/mini.snippets",
   "https://github.com/nvim-mini/mini.pairs",
+  "https://github.com/nvim-mini/mini.snippets",
+  "https://github.com/rafamadriz/friendly-snippets",
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/mason-org/mason.nvim",
@@ -38,6 +40,17 @@ require "mini.icons".mock_nvim_web_devicons()
 require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}
+
+local gen_loader = require "mini.snippets".gen_loader
+require "mini.snippets".setup {
+  snippets = {
+    gen_loader.from_lang(),
+  },
+  mappings = {
+    expand = "<c-k>"
+  }
+}
+
 require "mason".setup {}
 require "oil".setup {
   skip_confirm_for_simple_edits = true,
