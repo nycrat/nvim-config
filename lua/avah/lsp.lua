@@ -1,4 +1,4 @@
-vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html", "clangd", "tailwindcss", "tinymist" }
+vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html", "clangd", "tailwindcss", "tinymist", "gdscript" }
 
 vim.lsp.config("lua_ls", {
   settings = {
