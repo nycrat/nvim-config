@@ -19,6 +19,9 @@ vim.pack.add {
   "https://github.com/chomosuke/typst-preview.nvim",
   "https://github.com/ray-x/lsp_signature.nvim",
   "https://github.com/kdheepak/lazygit.nvim",
+  "https://github.com/mfussenegger/nvim-dap",
+  "https://github.com/rcarriga/nvim-dap-ui",
+  "https://github.com/nvim-neotest/nvim-nio",
 }
 
 require "nightfox".setup {
