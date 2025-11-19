@@ -73,6 +73,10 @@
       "rev": "21f5324",
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
+    "nvim-spectre": {
+      "rev": "72f56f7",
+      "src": "https://github.com/nvim-pack/nvim-spectre"
+    },
     "nvim-treesitter": {
       "rev": "42fc28ba",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"

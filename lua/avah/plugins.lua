@@ -22,6 +22,7 @@ vim.pack.add {
   "https://github.com/mfussenegger/nvim-dap",
   "https://github.com/rcarriga/nvim-dap-ui",
   "https://github.com/nvim-neotest/nvim-nio",
+  "https://github.com/nvim-pack/nvim-spectre",
 }
 
 require "nightfox".setup {
@@ -31,8 +32,7 @@ require "nightfox".setup {
 }
 
 require "nvim-treesitter.configs".setup {
-  ensure_installed = { "lua" },
-  highlight = { enable = true }
+  auto_install = true,
 }
 
 require "telescope".setup {}
