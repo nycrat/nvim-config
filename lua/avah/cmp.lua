@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         return tonumber(vim.fn.pumvisible()) ~= 0
       end
 
-      vim.keymap.set("i", "<cr>", function ()
+      vim.keymap.set("i", "<cr>", function()
         if pumvisible() then
           feedkeys "<esc>a<cr>"
         else
