@@ -12,10 +12,18 @@ vim.lsp.config("lua_ls", {
 
 vim.g.autoformat = true
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    if vim.g.autoformat then
-      vim.lsp.buf.format({ async = true })
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+      local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+    if client:supports_method("textDocument/formatting") then
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = ev.buf,
+        callback = function()
+          if vim.g.autoformat then
+            vim.lsp.buf.format({ async = true })
+          end
+        end,
+      })
     end
   end
 })
