@@ -22,6 +22,8 @@ vim.keymap.set("n", "<Leader>dB", function() dap.set_breakpoint(nil, nil, vim.fn
 vim.keymap.set("n", "<Leader>dl", dap.run_last)
 vim.keymap.set("n", "<Leader>du", dapui.toggle)
 
+vim.keymap.set("n", "<Leader>dt", require "dap-go".debug_test)
+
 -- vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
 --   require("dap.ui.widgets").hover()
 -- end)
