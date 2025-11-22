@@ -11,6 +11,8 @@ map("n", "<leader><tab>", function()
 	end
 end)
 
+map("n", "-", require("oil").open)
+
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
 map("n", "<leader>x", "<cmd>Telescope live_grep<cr>")
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
