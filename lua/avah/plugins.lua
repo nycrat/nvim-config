@@ -14,6 +14,7 @@ vim.pack.add {
   "https://github.com/kdheepak/lazygit.nvim",
   "https://github.com/nvim-pack/nvim-spectre",
   "https://github.com/windwp/nvim-ts-autotag",
+  "https://github.com/rafamadriz/friendly-snippets"
 }
 
 require "nvim-ts-autotag".setup {}
@@ -31,22 +32,24 @@ require "nvim-treesitter.configs".setup {
 require "mini.pick".setup {}
 
 require "mini.icons".setup {}
-require "mini.icons".tweak_lsp_kind()
-require "mini.icons".mock_nvim_web_devicons()
+MiniIcons.tweak_lsp_kind()
+MiniIcons.mock_nvim_web_devicons()
 
 require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}
+require "mini.statusline".setup {}
+require "mini.notify".setup {}
 
 local gen_loader = require "mini.snippets".gen_loader
+
 require "mini.snippets".setup {
   snippets = {
-    gen_loader.from_lang(),
-  },
-  mappings = {
-    expand = "<c-k>"
+    gen_loader.from_lang()
   }
 }
+
+MiniSnippets.start_lsp_server()
 
 require "mason".setup {}
 require "oil".setup {
