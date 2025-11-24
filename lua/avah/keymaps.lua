@@ -13,8 +13,8 @@ end)
 
 map("n", "-", require("oil").open)
 
-map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>x", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>p", "<cmd>Pick files<cr>")
+map("n", "<leader>x", "<cmd>Pick grep_live<cr>")
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
 map({ "n", "x", "v" }, "<leader>y", "\"+y")
 map("i", "jk", "<esc>")

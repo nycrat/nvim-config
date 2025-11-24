@@ -1,13 +1,7 @@
 vim.pack.add {
   "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/nvim-treesitter/nvim-treesitter",
-  "https://github.com/nvim-telescope/telescope.nvim",
-  "https://github.com/nvim-mini/mini.icons",
-  "https://github.com/nvim-mini/mini.surround",
-  "https://github.com/nvim-mini/mini.snippets",
-  "https://github.com/nvim-mini/mini.pairs",
-  "https://github.com/nvim-mini/mini.snippets",
-  "https://github.com/rafamadriz/friendly-snippets",
+  "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/mason-org/mason.nvim",
@@ -17,17 +11,12 @@ vim.pack.add {
   { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/chomosuke/typst-preview.nvim",
-  "https://github.com/ray-x/lsp_signature.nvim",
   "https://github.com/kdheepak/lazygit.nvim",
-  "https://github.com/mfussenegger/nvim-dap",
-  "https://github.com/rcarriga/nvim-dap-ui",
-  "https://github.com/nvim-neotest/nvim-nio",
-  "https://github.com/theHamsta/nvim-dap-virtual-text",
   "https://github.com/nvim-pack/nvim-spectre",
-  "https://github.com/leoluz/nvim-dap-go",
+  "https://github.com/windwp/nvim-ts-autotag",
 }
 
-require "dap-go".setup {}
+require "nvim-ts-autotag".setup {}
 
 require "nightfox".setup {
   options = {
@@ -39,9 +28,10 @@ require "nvim-treesitter.configs".setup {
   auto_install = true,
 }
 
-require "telescope".setup {}
+require "mini.pick".setup {}
 
 require "mini.icons".setup {}
+require "mini.icons".tweak_lsp_kind()
 require "mini.icons".mock_nvim_web_devicons()
 
 require "mini.surround".setup {}
@@ -61,6 +51,7 @@ require "mini.snippets".setup {
 require "mason".setup {}
 require "oil".setup {
   skip_confirm_for_simple_edits = true,
+  watch_for_changes = true,
   view_options = {
     show_hidden = true,
     is_always_hidden = function(name, buf)
@@ -70,13 +61,5 @@ require "oil".setup {
 }
 require "guess-indent".setup {}
 require "todo-comments".setup {}
-require "lsp_signature".setup {
-  hint_prefix = {
-    above = "↙ ", -- when the hint is on the line above the current line
-    current = "← ", -- when the hint is on the same line
-    below = "↖ ", -- when the hint is on the line below the current line
-  },
-  timer_interval = 0,
-}
 
 require "avah.harpoon"

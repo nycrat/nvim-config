@@ -1,45 +1,9 @@
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
-    if client:supports_method("textDocument/completion") then
-      local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
-      client.server_capabilities.completionProvider.triggerCharacters = chars
+require "mini.completion".setup {
+  delay = { completion = 5, info = 5, signature = 5 },
+  mappings = {
+    force_twostep = "<c-n>",
+  }
+}
 
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-
-      local function feedkeys(keys)
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, false, true), 'n', true)
-      end
-
-      local function pumvisible()
-        return tonumber(vim.fn.pumvisible()) ~= 0
-      end
-
-      vim.keymap.set("i", "<cr>", function()
-        if pumvisible() then
-          feedkeys "<esc>a<cr>"
-        else
-          feedkeys "<cr>"
-        end
-      end)
-
-      vim.keymap.set("i", "<c-n>", function()
-        if pumvisible() then
-          feedkeys "<c-n>"
-        else
-          if next(vim.lsp.get_clients { bufnr = 0 }) then
-            vim.lsp.completion.get()
-          else
-            if vim.bo.omnifunc == "" then
-              feedkeys "<c-x><c-n>"
-            else
-              feedkeys "<c-x><c-o>"
-            end
-          end
-        end
-      end)
-    end
-  end
-})
-
--- vim.cmd "set completeopt+=noselect"
+-- Disables using Enter to complete
+vim.keymap.set("i", "<cr>", "<esc>a<cr>")

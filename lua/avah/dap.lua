@@ -1,3 +1,11 @@
+vim.pack.add {
+  "https://github.com/mfussenegger/nvim-dap",
+  "https://github.com/rcarriga/nvim-dap-ui",
+  "https://github.com/nvim-neotest/nvim-nio",
+  "https://github.com/theHamsta/nvim-dap-virtual-text",
+  "https://github.com/leoluz/nvim-dap-go",
+}
+
 local project_file = vim.fn.getcwd() .. "/project.godot"
 if vim.uv.fs_stat(project_file) then
   vim.fn.serverstart "./godothost"
@@ -38,3 +46,5 @@ vim.keymap.set("n", "<Leader>dt", require "dap-go".debug_test)
 --   local widgets = require("dap.ui.widgets")
 --   widgets.centered_float(widgets.scopes)
 -- end)
+
+require "dap-go".setup {}

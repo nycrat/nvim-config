@@ -1,6 +1,8 @@
 local harpoon = require("harpoon")
+local extensions = require("harpoon.extensions");
 
 harpoon:setup()
+harpoon:extend(extensions.builtins.highlight_current_file())
 
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():add()

@@ -1,4 +1,4 @@
-vim.opt.smartindent = true
+vim.opt.smartindent = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -21,7 +21,7 @@ vim.opt.writebackup = false
 vim.opt.swapfile = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
-vim.opt.guicursor = "a:block"
+-- vim.opt.guicursor = "a:block"
 
 vim.opt.updatetime = 20
 vim.opt.scrolloff = 999
