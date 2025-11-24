@@ -6,4 +6,10 @@ require "mini.completion".setup {
 }
 
 -- Disables using Enter to complete
-vim.keymap.set("i", "<cr>", "<esc>a<cr>")
+vim.keymap.set("i", "<cr>", function()
+  if vim.fn.pumvisible() then
+    return vim.keycode "<c-e><cr>"
+  else
+    return vim.keycode "<cr>"
+  end
+end, { expr = true })
