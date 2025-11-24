@@ -33,6 +33,10 @@
       "rev": "ba47d4b",
       "src": "https://github.com/EdenEast/nightfox.nvim"
     },
+    "none-ls.nvim": {
+      "rev": "c27ba0d",
+      "src": "https://github.com/nvimtools/none-ls.nvim"
+    },
     "nvim-dap": {
       "rev": "5860c7c",
       "src": "https://github.com/mfussenegger/nvim-dap"

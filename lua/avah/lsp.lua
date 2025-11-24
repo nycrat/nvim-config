@@ -1,4 +1,7 @@
-vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html", "clangd", "tailwindcss", "tinymist", "gdscript" }
+vim.pack.add({ "https://github.com/nvimtools/none-ls.nvim" })
+
+vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html",
+  "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer" }
 
 vim.lsp.config("lua_ls", {
   settings = {
@@ -16,7 +19,20 @@ vim.lsp.config("tinymist", {
   },
 })
 
+local null_ls = require "null-ls"
+
+null_ls.setup {
+  sources = {
+    null_ls.builtins.formatting.prettier
+  }
+}
+
 vim.g.autoformat = true
+
+local special_formatting = {
+  css = "null-ls",
+  html = "null-ls",
+}
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
@@ -26,8 +42,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
         buffer = ev.buf,
         callback = function()
           if vim.g.autoformat then
-            vim.lsp.buf.format({ async = false })
-            print("formatted")
+            vim.lsp.buf.format({
+              async = true,
+              filter = function(c)
+                if special_formatting[vim.bo.filetype] ~= nil then
+                  return special_formatting[vim.bo.filetype] == c.name
+                end
+                return true
+              end
+            })
           end
         end,
       })
