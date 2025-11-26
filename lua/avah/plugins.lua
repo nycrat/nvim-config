@@ -54,6 +54,10 @@ require "oil".setup {
     is_always_hidden = function(name, buf)
       return name == ".."
     end
+  },
+  keymaps = {
+    ["<C-l>"] = false,
+    ["<C-h>"] = false,
   }
 }
 require "guess-indent".setup {}
