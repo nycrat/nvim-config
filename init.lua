@@ -7,5 +7,4 @@ require "avah.cmp"
 require "avah.dap"
 require "avah.godot"
 require "avah.keymaps"
-
-vim.cmd "colorscheme dawnfox"
+require "avah.theme"

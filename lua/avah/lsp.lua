@@ -1,7 +1,8 @@
 vim.pack.add({ "https://github.com/nvimtools/none-ls.nvim" })
 
 vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html",
-  "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer" }
+  "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer",
+  "mdx_analyzer" }
 
 vim.lsp.config("lua_ls", {
   settings = {

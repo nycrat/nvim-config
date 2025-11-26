@@ -1,5 +1,4 @@
 vim.pack.add {
-  "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/nvim-treesitter/nvim-treesitter",
   "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/stevearc/oil.nvim",
@@ -17,13 +16,8 @@ vim.pack.add {
   "https://github.com/rafamadriz/friendly-snippets"
 }
 
-require "nvim-ts-autotag".setup {}
 
-require "nightfox".setup {
-  options = {
-    transparent = true,
-  }
-}
+require "nvim-ts-autotag".setup {}
 
 require "nvim-treesitter.configs".setup {
   auto_install = true,
