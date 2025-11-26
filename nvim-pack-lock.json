@@ -29,10 +29,6 @@
       "rev": "72b0194",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
-    "nightfox.nvim": {
-      "rev": "ba47d4b",
-      "src": "https://github.com/EdenEast/nightfox.nvim"
-    },
     "none-ls.nvim": {
       "rev": "c27ba0d",
       "src": "https://github.com/nvimtools/none-ls.nvim"
@@ -84,14 +80,6 @@
     "rose-pine": {
       "rev": "cf2a288",
       "src": "https://github.com/rose-pine/neovim"
-    },
-    "telescope.nvim": {
-      "rev": "83a3a71",
-      "src": "https://github.com/nvim-telescope/telescope.nvim"
-    },
-    "todo-comments.nvim": {
-      "rev": "31e3c38",
-      "src": "https://github.com/folke/todo-comments.nvim"
     },
     "typst-preview.nvim": {
       "rev": "87d0f3a",

@@ -1,8 +1,20 @@
-vim.pack.add({ "https://github.com/nvimtools/none-ls.nvim" })
+vim.pack.add({
+  "https://github.com/nvimtools/none-ls.nvim",
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/rafamadriz/friendly-snippets",
+  "https://github.com/nvim-treesitter/nvim-treesitter"
+})
 
 vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html",
   "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer",
   "mdx_analyzer" }
+
+require "nvim-treesitter.configs".setup {
+  auto_install = true,
+}
+
+require "mason".setup {}
 
 vim.lsp.config("lua_ls", {
   settings = {
