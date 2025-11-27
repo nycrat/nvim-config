@@ -53,4 +53,4 @@ require "oil".setup {
   }
 }
 require "guess-indent".setup {}
-require "avah.harpoon"
+require "gen.harpoon"
