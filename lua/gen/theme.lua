@@ -30,10 +30,8 @@ require "rose-pine".setup {
   highlight_groups = {
     Comment = { fg = "pink" }
   },
-  options = {
-    styles = {
-      transparency = true
-    }
+  styles = {
+    transparency = true
   }
 }
 
