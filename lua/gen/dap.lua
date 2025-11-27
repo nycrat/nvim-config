@@ -6,11 +6,6 @@ vim.pack.add {
   "https://github.com/leoluz/nvim-dap-go",
 }
 
-local project_file = vim.fn.getcwd() .. "/project.godot"
-if vim.uv.fs_stat(project_file) then
-  vim.fn.serverstart "./godothost"
-end
-
 local dap, dapui = require "dap", require "dapui"
 require "nvim-dap-virtual-text".setup {}
 require "dapui".setup {}

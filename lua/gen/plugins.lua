@@ -3,7 +3,6 @@ vim.pack.add {
   "https://github.com/stevearc/oil.nvim",
 
   { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
-  "https://github.com/chomosuke/typst-preview.nvim",
 
   "https://github.com/nvim-pack/nvim-spectre",
   "https://github.com/kdheepak/lazygit.nvim",
