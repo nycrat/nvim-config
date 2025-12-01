@@ -4,7 +4,7 @@ require "rose-pine".setup {
   palette = {
     dawn = {
       _nc = "#f8f0e7",
-      base = "#ffffff",
+      base = "#eaeaea",
       surface = "#fafafa",
       overlay = "#fffaf3",
       muted = "#eea4b2",
