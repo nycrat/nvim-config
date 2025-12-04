@@ -28,7 +28,8 @@ require "rose-pine".setup {
     }
   },
   highlight_groups = {
-    Comment = { fg = "pink" }
+    Comment = { fg = "pink" },
+    MiniPickMatchCurrent = { bg = "highlight_high" }
   },
   styles = {
     transparency = true
