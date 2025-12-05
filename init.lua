@@ -10,3 +10,4 @@ require "gen.theme"
 
 require "lang.godot"
 require "lang.typst"
+require "lang.cpp"
