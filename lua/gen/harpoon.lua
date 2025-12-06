@@ -1,7 +1,21 @@
 local harpoon = require("harpoon")
 local extensions = require("harpoon.extensions");
 
-harpoon:setup()
+-- from https://github.com/ThePrimeagen/harpoon/issues/662#issuecomment-3493869362
+local function get_key()
+  local branch = vim.fn.system("git branch --show-current")
+  local cwd = vim.loop.cwd()
+  if branch then
+    cwd = cwd .. "::" .. branch
+  end
+  return cwd
+end
+
+harpoon:setup({
+  settings = {
+    key = get_key,
+  },
+})
 harpoon:extend(extensions.builtins.highlight_current_file())
 
 vim.keymap.set("n", "<leader>a", function()
