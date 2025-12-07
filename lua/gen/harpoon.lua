@@ -2,7 +2,7 @@ local harpoon = require("harpoon")
 local extensions = require("harpoon.extensions");
 
 -- from https://github.com/ThePrimeagen/harpoon/issues/662#issuecomment-3493869362
-local function get_key()
+local function get_key_with_branch()
   local branch = vim.fn.system("git branch --show-current")
   local cwd = vim.loop.cwd()
   if branch then
@@ -11,9 +11,12 @@ local function get_key()
   return cwd
 end
 
+-- Only load key once per neovim launch for performance
+local current_key = get_key_with_branch()
+
 harpoon:setup({
   settings = {
-    key = get_key,
+    key = function() return current_key end,
   },
 })
 harpoon:extend(extensions.builtins.highlight_current_file())
