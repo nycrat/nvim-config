@@ -12,6 +12,7 @@ vim.pack.add {
   "https://github.com/nmac427/guess-indent.nvim",
 
   "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/Aasim-A/scrollEOF.nvim",
 }
 
 
@@ -53,4 +54,8 @@ require "oil".setup {
   }
 }
 require "guess-indent".setup {}
+require "scrollEOF".setup {
+  insert_mode = true,
+}
+
 require "gen.harpoon"

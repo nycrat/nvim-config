@@ -117,6 +117,10 @@
       "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
       "src": "https://github.com/rose-pine/neovim"
     },
+    "scrollEOF.nvim": {
+      "rev": "e462b9a07b8166c3e8011f1dcbc6bf68b67cd8d7",
+      "src": "https://github.com/Aasim-A/scrollEOF.nvim"
+    },
     "telescope.nvim": {
       "rev": "0294ae3eafe662c438addb8692d9c98ef73a983e",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
