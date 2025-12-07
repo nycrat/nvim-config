@@ -32,41 +32,14 @@ vim.lsp.config("tinymist", {
   },
 })
 
-local null_ls = require "null-ls"
-
-null_ls.setup {
-  sources = {
-    null_ls.builtins.formatting.prettier
-  }
-}
-
 vim.g.autoformat = true
 
-local special_formatting = {
-  css = "null-ls",
-  html = "null-ls",
-}
+local null_ls = require "null-ls"
 
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
-    if client:supports_method("textDocument/formatting") then
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = ev.buf,
-        callback = function()
-          if vim.g.autoformat then
-            vim.lsp.buf.format({
-              async = true,
-              filter = function(c)
-                if special_formatting[vim.bo.filetype] ~= nil then
-                  return special_formatting[vim.bo.filetype] == c.name
-                end
-                return true
-              end
-            })
-          end
-        end,
-      })
-    end
-  end
-})
+null_ls.setup {}
+null_ls.register(null_ls.builtins.formatting.prettier)
+
+local helpers = require "gen.helpers"
+
+helpers.specify_formatter("css", "null-ls")
+helpers.specify_formatter("html", "null-ls")

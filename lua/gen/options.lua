@@ -25,3 +25,6 @@ vim.opt.writebackup = false
 vim.opt.swapfile = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+
+vim.opt.exrc = true
+vim.opt.secure = true
