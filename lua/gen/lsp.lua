@@ -43,3 +43,5 @@ local helpers = require "gen.helpers"
 
 helpers.specify_formatter("css", "null-ls")
 helpers.specify_formatter("html", "null-ls")
+helpers.specify_formatter("typescript", "null-ls")
+helpers.specify_formatter("typescriptreact", "null-ls")
