@@ -1,4 +1,7 @@
-vim.pack.add { { src = "https://github.com/rose-pine/neovim", name = "rose-pine" } }
+vim.pack.add {
+  { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+  "https://github.com/folke/tokyonight.nvim",
+}
 
 require "rose-pine".setup {
   palette = {
@@ -36,4 +39,5 @@ require "rose-pine".setup {
   }
 }
 
-vim.cmd "colorscheme rose-pine-dawn"
+vim.cmd "colorscheme tokyonight-moon"
+-- vim.cmd "colorscheme rose-pine-dawn"
