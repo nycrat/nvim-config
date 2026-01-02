@@ -5,6 +5,7 @@ require "gen.plugins"
 require "gen.lsp"
 require "gen.cmp"
 require "gen.dap"
+require "gen.commands"
 require "gen.keymaps"
 require "gen.theme"
 
