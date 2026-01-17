@@ -51,3 +51,5 @@ end)
 map("n", "<leader>cb", "<Cmd>Build<CR>")
 map("n", "<leader>cl", "<Cmd>Run<CR>")
 map("n", "<leader>cr", "<Cmd>BuildAndRun<CR>")
+
+map("n", "<leader>tc", require "treesitter-context".toggle)

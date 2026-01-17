@@ -13,6 +13,7 @@ vim.pack.add {
 
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/Aasim-A/scrollEOF.nvim",
+  "https://github.com/nvim-treesitter/nvim-treesitter-context",
 }
 
 
@@ -56,6 +57,10 @@ require "oil".setup {
 require "guess-indent".setup {}
 require "scrollEOF".setup {
   insert_mode = true,
+}
+require "treesitter-context".setup {
+  max_lines = 2,
+  enable = false,
 }
 
 require "gen.harpoon"
