@@ -24,11 +24,14 @@ MiniIcons.tweak_lsp_kind()
 MiniIcons.mock_nvim_web_devicons()
 
 local win_config = function()
-  local height = vim.o.lines
-  local width = vim.o.columns
+  local height = math.floor(0.6 * vim.o.lines)
+  local width = math.floor(0.6 * vim.o.columns)
   return {
+    anchor = 'NW',
     height = height,
     width = width,
+    row = math.floor(0.5 * (vim.o.lines - height)),
+    col = math.floor(0.5 * (vim.o.columns - width)),
   }
 end
 
