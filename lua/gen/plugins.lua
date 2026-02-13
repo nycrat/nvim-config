@@ -23,7 +23,20 @@ require "mini.icons".setup {}
 MiniIcons.tweak_lsp_kind()
 MiniIcons.mock_nvim_web_devicons()
 
-require "mini.pick".setup {}
+local win_config = function()
+  local height = vim.o.lines
+  local width = vim.o.columns
+  return {
+    height = height,
+    width = width,
+  }
+end
+
+require "mini.pick".setup {
+  window = {
+    config = win_config
+  },
+}
 require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}

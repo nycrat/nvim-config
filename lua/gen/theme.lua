@@ -39,5 +39,5 @@ require "rose-pine".setup {
   }
 }
 
-vim.cmd "colorscheme tokyonight-moon"
--- vim.cmd "colorscheme rose-pine-dawn"
+-- vim.cmd "colorscheme tokyonight-night"
+vim.cmd "colorscheme rose-pine-dawn"

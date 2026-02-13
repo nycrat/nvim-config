@@ -30,6 +30,19 @@ require "nvim-treesitter.configs".setup {
 
 require "mason".setup {}
 
+vim.lsp.config("pylsp", {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          maxLineLength = 120,
+          -- ignore = { "E501" }, -- ignore "line too long"
+        }
+      }
+    }
+  }
+})
+
 vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
@@ -46,7 +59,7 @@ vim.lsp.config("tinymist", {
   },
 })
 
-vim.g.autoformat = true
+vim.g.autoformat = false
 
 local null_ls = require "null-ls"
 
