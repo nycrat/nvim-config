@@ -68,6 +68,12 @@ require "oil".setup {
   keymaps = {
     ["<C-l>"] = false,
     ["<C-h>"] = false,
+    ["go"] = {
+      function()
+        vim.cmd("silent exec '!open " .. require("oil").get_current_dir() .. "'")
+      end,
+      desc = "Open CWD with Default System File Explorer",
+    },
   }
 }
 require "guess-indent".setup {}
