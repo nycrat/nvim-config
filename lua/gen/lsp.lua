@@ -1,3 +1,5 @@
+vim.lsp.log.set_level(vim.log.levels.OFF)
+
 vim.pack.add({
   "https://github.com/nvimtools/none-ls.nvim",
   "https://github.com/mason-org/mason.nvim",
