@@ -5,7 +5,6 @@ vim.pack.add {
   { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
 
   "https://github.com/nvim-pack/nvim-spectre",
-  "https://github.com/kdheepak/lazygit.nvim",
 
   "https://github.com/windwp/nvim-ts-autotag",
   "https://github.com/lewis6991/gitsigns.nvim",

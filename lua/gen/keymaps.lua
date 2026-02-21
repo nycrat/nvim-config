@@ -15,7 +15,6 @@ map("n", "-", require("oil").open)
 
 map("n", "<leader>p", "<cmd>Pick files<cr>")
 map("n", "<leader>x", "<cmd>Pick grep_live<cr>")
-map("n", "<leader>gg", "<cmd>LazyGit<cr>")
 map("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
 map({ "n", "x", "v" }, "<leader>y", "\"+y")
 map("i", "jk", "<esc>")
