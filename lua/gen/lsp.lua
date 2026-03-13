@@ -10,7 +10,7 @@ vim.pack.add({
 
 vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html",
   "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer",
-  "mdx_analyzer" }
+  "mdx_analyzer", "protols" }
 
 vim.diagnostic.config {
   -- virtual_lines = true,
