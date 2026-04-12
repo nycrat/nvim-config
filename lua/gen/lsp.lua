@@ -17,8 +17,6 @@ require "mason-lspconfig".setup {
   automatic_enable = true
 }
 
-vim.lsp.inlay_hint.enable(true)
-
 vim.diagnostic.config {
   -- virtual_lines = true,
   virtual_text = true,
