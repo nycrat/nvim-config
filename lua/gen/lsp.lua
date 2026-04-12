@@ -3,14 +3,21 @@ vim.lsp.log.set_level(vim.log.levels.OFF)
 vim.pack.add({
   "https://github.com/nvimtools/none-ls.nvim",
   "https://github.com/mason-org/mason.nvim",
+  "https://github.com/mason-org/mason-lspconfig.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/rafamadriz/friendly-snippets",
   "https://github.com/nvim-treesitter/nvim-treesitter"
 })
 
-vim.lsp.enable { "lua_ls", "gopls", "astro", "ts_ls", "cssls", "pylsp", "html",
-  "clangd", "tailwindcss", "tinymist", "gdscript", "rust_analyzer",
-  "mdx_analyzer", "protols" }
+require "nvim-treesitter".setup {
+  auto_install = true,
+}
+require "mason".setup {}
+require "mason-lspconfig".setup {
+  automatic_enable = true
+}
+
+vim.lsp.inlay_hint.enable(true)
 
 vim.diagnostic.config {
   -- virtual_lines = true,
@@ -25,12 +32,6 @@ vim.diagnostic.config {
     },
   }
 }
-
-require "nvim-treesitter".setup {
-  auto_install = true,
-}
-
-require "mason".setup {}
 
 vim.lsp.config("pylsp", {
   settings = {
