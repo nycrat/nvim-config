@@ -39,6 +39,7 @@ require "mini.pick".setup {
     config = win_config
   },
 }
+require "mini.extra".setup {}
 require "mini.surround".setup {}
 require "mini.snippets".setup {}
 require "mini.pairs".setup {}
