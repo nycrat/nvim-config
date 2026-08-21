@@ -31,19 +31,6 @@ vim.diagnostic.config {
   }
 }
 
-vim.lsp.config("pylsp", {
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          maxLineLength = 120,
-          -- ignore = { "E501" }, -- ignore "line too long"
-        }
-      }
-    }
-  }
-})
-
 vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
