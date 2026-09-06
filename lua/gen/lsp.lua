@@ -9,9 +9,7 @@ vim.pack.add({
   "https://github.com/nvim-treesitter/nvim-treesitter"
 })
 
-require "nvim-treesitter".setup {
-  auto_install = true,
-}
+require "nvim-treesitter".setup {}
 require "mason".setup {}
 require "mason-lspconfig".setup {
   automatic_enable = true

@@ -8,8 +8,8 @@ require "mini.completion".setup {
 -- Disables using Enter to complete
 vim.keymap.set("i", "<cr>", function()
   if vim.fn.pumvisible() ~= 0 then
-    return vim.keycode "<c-e><cr>"
+    return vim.keycode("<c-e>") .. require('mini.pairs').cr()
   else
-    return vim.keycode "<cr>"
+    return require('mini.pairs').cr()
   end
 end, { expr = true })
