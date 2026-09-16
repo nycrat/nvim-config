@@ -39,5 +39,17 @@ require "rose-pine".setup {
   }
 }
 
--- vim.cmd "colorscheme tokyonight-night"
-vim.cmd "colorscheme rose-pine-dawn"
+-- specific for macOS
+local theme = vim.fn.system([[
+if defaults read -g AppleInterfaceStyle &>/dev/null; then
+    echo "dark"
+else
+    echo "light"
+fi
+]])
+
+if theme == "dark\n" then
+  vim.cmd "colorscheme tokyonight-night"
+else
+  vim.cmd "colorscheme rose-pine-dawn"
+end
