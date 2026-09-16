@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "conjure": {
+      "rev": "349256ada7f73801f6e832abec1ac8eac32bf788",
+      "src": "https://github.com/Olical/conjure"
+    },
     "friendly-snippets": {
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
@@ -89,6 +93,10 @@
       "rev": "e462b9a07b8166c3e8011f1dcbc6bf68b67cd8d7",
       "src": "https://github.com/Aasim-A/scrollEOF.nvim"
     },
+    "texpresso.vim": {
+      "rev": "5630dca6090787c446e72886812a1b6a5716c2fa",
+      "src": "https://github.com/let-def/texpresso.vim"
+    },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
@@ -96,6 +104,14 @@
     "typst-preview.nvim": {
       "rev": "87db18b8d19c8b0eed399f52e4c527ce5afe4817",
       "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "vim-racket": {
+      "rev": "2c7ec0f35a2ad1ca00305e5d67837bc1f1d4b6cc",
+      "src": "https://github.com/wlangstroth/vim-racket"
+    },
+    "vimtex": {
+      "rev": "06d31c8c3c74614e19e12fd1974dfc504e2bbce2",
+      "src": "https://github.com/lervag/vimtex"
     }
   }
 }

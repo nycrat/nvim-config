@@ -13,6 +13,13 @@ vim.pack.add {
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/Aasim-A/scrollEOF.nvim",
   "https://github.com/nvim-treesitter/nvim-treesitter-context",
+
+  -- more language specific plugins, for racket and LaTeX
+  "https://github.com/wlangstroth/vim-racket",
+  "https://github.com/Olical/conjure",
+
+  "https://github.com/lervag/vimtex",
+  "https://github.com/let-def/texpresso.vim",
 }
 
 
