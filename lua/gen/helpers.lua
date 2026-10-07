@@ -22,13 +22,13 @@ M.specify_formatter = function(filetype, server)
 					callback = function()
 						if vim.g.autoformat then
 							vim.lsp.buf.format({
-								async = true
+								async = true,
 							})
 						end
 					end,
 				})
 			end
-		end
+		end,
 	})
 end
 

@@ -1,15 +1,15 @@
-require "mini.completion".setup {
-  delay = { completion = 5, info = 5, signature = 5 },
-  mappings = {
-    force_twostep = "<c-l>",
-  }
-}
+require("mini.completion").setup({
+	delay = { completion = 5, info = 5, signature = 5 },
+	mappings = {
+		force_twostep = "<c-l>",
+	},
+})
 
 -- Disables using Enter to complete
 vim.keymap.set("i", "<cr>", function()
-  if vim.fn.pumvisible() ~= 0 then
-    return vim.keycode("<c-e>") .. require('mini.pairs').cr()
-  else
-    return require('mini.pairs').cr()
-  end
+	if vim.fn.pumvisible() ~= 0 then
+		return vim.keycode("<c-e>") .. require("mini.pairs").cr()
+	else
+		return require("mini.pairs").cr()
+	end
 end, { expr = true })

@@ -14,9 +14,9 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 vim.opt.winborder = "bold"
-vim.opt.showtabline = 0      -- disable tab bar at top of vim
-vim.opt.signcolumn = "yes"   -- always display for gitsigns and lsp diagnostics
-vim.opt.scrolloff = 999      -- keep cursor centered vertically as much as possible
+vim.opt.showtabline = 0 -- disable tab bar at top of vim
+vim.opt.signcolumn = "yes" -- always display for gitsigns and lsp diagnostics
+vim.opt.scrolloff = 999 -- keep cursor centered vertically as much as possible
 vim.opt.inccommand = "split" -- preview search and replace
 
 vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noinsert" }

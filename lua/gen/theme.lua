@@ -1,43 +1,43 @@
-vim.pack.add {
-  { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
-  "https://github.com/folke/tokyonight.nvim",
-}
+vim.pack.add({
+	{ src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+	"https://github.com/folke/tokyonight.nvim",
+})
 
-require "rose-pine".setup {
-  palette = {
-    dawn = {
-      _nc = "#f8f0e7",
-      base = "#eaeaea",
-      surface = "#fafafa",
-      overlay = "#fffaf3",
-      muted = "#eea4b2",
-      subtle = "#db7bae",
-      text = "#871474",
-      love = "#b4637a",
-      gold = "#d93dc1",
-      rose = "#59dbf2",
-      pine = "#286983",
-      foam = "#d18a8d",
-      iris = "#907aa9",
-      leaf = "#6d8f89",
+require("rose-pine").setup({
+	palette = {
+		dawn = {
+			_nc = "#f8f0e7",
+			base = "#eaeaea",
+			surface = "#fafafa",
+			overlay = "#fffaf3",
+			muted = "#eea4b2",
+			subtle = "#db7bae",
+			text = "#871474",
+			love = "#b4637a",
+			gold = "#d93dc1",
+			rose = "#59dbf2",
+			pine = "#286983",
+			foam = "#d18a8d",
+			iris = "#907aa9",
+			leaf = "#6d8f89",
 
-      pink = "#d9b2c1",
-      blue = "#9cd8f4",
+			pink = "#d9b2c1",
+			blue = "#9cd8f4",
 
-      highlight_low = "#f4ede8",
-      highlight_med = "#dfdad9",
-      highlight_high = "#cecacd",
-      none = "NONE",
-    }
-  },
-  highlight_groups = {
-    Comment = { fg = "pink" },
-    MiniPickMatchCurrent = { bg = "highlight_high" }
-  },
-  styles = {
-    transparency = true
-  }
-}
+			highlight_low = "#f4ede8",
+			highlight_med = "#dfdad9",
+			highlight_high = "#cecacd",
+			none = "NONE",
+		},
+	},
+	highlight_groups = {
+		Comment = { fg = "pink" },
+		MiniPickMatchCurrent = { bg = "highlight_high" },
+	},
+	styles = {
+		transparency = true,
+	},
+})
 
 -- specific for macOS
 local theme = vim.fn.system([[
@@ -49,7 +49,7 @@ fi
 ]])
 
 if theme == "dark\n" then
-  vim.cmd "colorscheme tokyonight-night"
+	vim.cmd("colorscheme tokyonight-night")
 else
-  vim.cmd "colorscheme rose-pine-dawn"
+	vim.cmd("colorscheme rose-pine-dawn")
 end
