@@ -29,6 +29,8 @@ vim.diagnostic.config({
 	},
 })
 
+vim.lsp.enable("racket_langserver")
+
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
