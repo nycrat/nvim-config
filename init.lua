@@ -452,12 +452,62 @@ do
     },
   }
 
+  vim.pack.add {
+    { src = gh 'rose-pine/neovim', name = 'rose-pine' },
+    'https://github.com/folke/tokyonight.nvim',
+  }
+
+  require('rose-pine').setup {
+    palette = {
+      dawn = {
+        _nc = '#f8f0e7',
+        base = '#eaeaea',
+        surface = '#fafafa',
+        overlay = '#fffaf3',
+        muted = '#eea4b2',
+        subtle = '#db7bae',
+        text = '#871474',
+        love = '#b4637a',
+        gold = '#d93dc1',
+        rose = '#59dbf2',
+        pine = '#286983',
+        foam = '#d18a8d',
+        iris = '#907aa9',
+        leaf = '#6d8f89',
+
+        pink = '#d9b2c1',
+        blue = '#9cd8f4',
+
+        highlight_low = '#f4ede8',
+        highlight_med = '#dfdad9',
+        highlight_high = '#cecacd',
+        none = 'NONE',
+      },
+    },
+    highlight_groups = {
+      Comment = { fg = 'pink' },
+      MiniPickMatchCurrent = { bg = 'highlight_high' },
+    },
+    styles = {
+      transparency = true,
+    },
+  }
+
   vim.pack.add { gh 'ellisonleao/gruvbox.nvim' }
 
-  -- Load the colorscheme here.
-  -- Like many other themes, this one has different styles, and you could load
-  -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  vim.cmd.colorscheme 'gruvbox'
+  local theme = vim.fn.system [[
+  if defaults read -g AppleInterfaceStyle &>/dev/null; then
+      echo "dark"
+  else
+      echo "light"
+  fi
+  ]]
+
+  if theme == 'dark\n' then
+    vim.cmd.colorscheme 'gruvbox'
+  else
+    vim.cmd.colorscheme 'rose-pine-dawn'
+  end
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
