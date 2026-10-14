@@ -889,7 +889,7 @@ do
   end
 
   -- Not installable with Mason
-  vim.lsp.enable("racket_langserver")
+  vim.lsp.enable 'racket_langserver'
 end
 
 -- ============================================================
