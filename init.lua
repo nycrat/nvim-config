@@ -242,6 +242,7 @@ do
   -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
   -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+  vim.keymap.set('v', '<leader>y', '"+y')
   vim.keymap.set('i', 'jk', '<esc>')
   -- Open netrw in the current window and focus on the current file
   vim.keymap.set('n', '-', function()
@@ -808,9 +809,10 @@ do
   --  See `:help lsp-config` for information about keys and how to configure
   ---@type table<string, vim.lsp.Config>
   local servers = {
+    bazelrc_lsp = {},
+    pyright = {},
     clangd = {},
     -- gopls = {},
-    pyright = {},
     -- tsc = {},
     --
     -- Some languages (like rust) have entire language plugins that can be useful:
@@ -1094,7 +1096,7 @@ do
   --
   require 'kickstart.plugins.debug'
   -- require 'kickstart.plugins.indent_line'
-  require 'kickstart.plugins.lint'
+  -- require 'kickstart.plugins.lint'
   -- require 'kickstart.plugins.autopairs'
   -- require 'kickstart.plugins.neo-tree'
 
