@@ -245,16 +245,7 @@ do
   vim.keymap.set('v', '<leader>y', '"+y')
   vim.keymap.set('i', 'jk', '<esc>')
   -- Open netrw in the current window and focus on the current file
-  vim.keymap.set('n', '-', function()
-    local current_file = vim.fn.expand '%:t'
-    if current_file ~= '' then
-      vim.fn.setreg('/', current_file) -- Set the search register to the file name
-      vim.cmd 'Explore %:p:h' -- Open netrw at the file's directory
-      vim.cmd 'normal! n' -- Jump to the match (focus the file)
-    else
-      vim.cmd 'Explore' -- Fallback if no file is active
-    end
-  end, { silent = true, desc = 'Netrw: Open and focus current file' })
+  vim.keymap.set('n', '-', '<cmd>Oil<cr>')
 
   -- [[ Basic Autocommands ]]
   --  See `:help lua-guide-autocommands`
