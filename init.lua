@@ -235,6 +235,10 @@ do
   vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
   vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
   vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+  vim.keymap.set('n', '<C-c>', function()
+    local mc_ns = vim.api.nvim_create_namespace 'nvim.multicursor'
+    vim.api.nvim_buf_clear_namespace(0, mc_ns, 0, -1)
+  end, { desc = 'Clear multicursors' })
 
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -256,7 +260,7 @@ do
   vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight when yanking (copying) text',
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-    callback = function() vim.hl.on_yank() end,
+    callback = function() vim.hl.hl_op() end,
   })
 
   vim.api.nvim_create_autocmd('FileType', {
@@ -803,14 +807,10 @@ do
     bazelrc_lsp = {},
     pyright = {},
     clangd = {},
-    -- gopls = {},
-    -- tsc = {},
-    --
-    -- Some languages (like rust) have entire language plugins that can be useful:
-    --    https://github.com/mrcjkb/rustaceanvim
-    --
-    -- But for many setups, the LSP (`rust_analyzer`) will work just fine
-    -- rust_analyzer = {},
+    texlab = {},
+    gopls = {},
+    tsc = {},
+    rust_analyzer = {},
 
     stylua = {}, -- Used to format Lua code
 
